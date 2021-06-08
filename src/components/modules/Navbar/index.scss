@@ -1,0 +1,10 @@
+.navbar {
+  .nav-menu {
+    display: flex;
+  }
+  .nav-menu-item {
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+  }
+}

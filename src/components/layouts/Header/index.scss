@@ -1,0 +1,25 @@
+.header {
+  padding: 10px 100px;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+
+  .logo {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .navbar {
+    margin-left: 48px;
+  }
+
+  .icons-list {
+    margin-left: auto;
+
+    .icons-item {
+      &:not(:first-child) {
+        margin-left: 12px;
+      }
+    }
+  }
+}
