@@ -1,0 +1,24 @@
+.circle-wrapper {
+  .circle {
+    margin-top: 24px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .btn-toggle {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    box-shadow: 0 0 4px #000;
+    font-weight: bold;
+    &[disabled] {
+      cursor: not-allowed;
+    }
+  }
+}

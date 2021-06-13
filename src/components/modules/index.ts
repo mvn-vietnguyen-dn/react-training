@@ -1,3 +1,4 @@
-import Navbar from './Navbar'
+import Navbar from "./Navbar";
+import Circle from "./Circle";
 
-export { Navbar };
+export { Navbar, Circle };
