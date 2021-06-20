@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "This is title 1",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "color": "red"
+    },
+    {
+      "id": 2,
+      "title": "This is title 2",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "color": "yellow"
+    },
+    {
+      "id": 3,
+      "title": "This is title 3",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "color": "green"
+    },
+    {
+      "id": 4,
+      "title": "This is title 4",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "color": "blue"
+    },
+    {
+      "id": 5,
+      "title": "This is title 5",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "color": "purple"
+    }
+  ]
+}

@@ -2,7 +2,7 @@ import { Component } from "react";
 
 import "./App.scss";
 import { Header, Footer } from "./components/layouts";
-import { Circle } from "./components/modules";
+import { List } from "./components/modules";
 
 interface AppState {
   page: "home" | "about";
@@ -39,13 +39,14 @@ class App extends Component<{}, AppState> {
             </li>
           </ul>
           {page === "home" && (
-            <div className="circle-section">
-              <div className="circle-wrapper">
-                <Circle circleSize="110" number={20} isCountdowning />
-                <Circle circleSize="150" number={25} isCountdowning />
-                <Circle circleSize="130" number={15} isCountdowning />
-              </div>
-            </div>
+            // <div className="circle-section">
+            //   <div className="circle-wrapper">
+            //     <Circle circleSize="110" number={20} isCountdowning />
+            //     <Circle circleSize="150" number={25} isCountdowning />
+            //     <Circle circleSize="130" number={15} isCountdowning />
+            //   </div>
+            // </div>
+            <List />
           )}
         </main>
         <Footer />
