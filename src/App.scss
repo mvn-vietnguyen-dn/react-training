@@ -3,6 +3,7 @@
 
 @import './components/modules/Navbar';
 @import './components/modules/Circle';
+@import './components/modules/List';
 
 html,
 body,
@@ -51,6 +52,16 @@ body,
       }
     }
   }
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 ul,

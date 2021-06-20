@@ -1,0 +1,38 @@
+.list-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 0 0;
+  .list-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 60px 10px 10px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    &:not(:first-child) {
+      margin-top: 16px;
+    }
+    &-header {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+    }
+    &-content {
+      margin-left: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &-description {
+      margin-top: 8px;
+    }
+    &-delete-icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
+      cursor: pointer;
+    }
+  }
+}
