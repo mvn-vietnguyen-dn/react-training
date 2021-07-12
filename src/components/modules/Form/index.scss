@@ -1,0 +1,10 @@
+.register-form {
+  padding: 40px;
+  display: flex;
+  .form-wrapper {
+    flex-basis: 450px;
+  }
+  .table-wrapper {
+    flex: 1;
+  }
+}

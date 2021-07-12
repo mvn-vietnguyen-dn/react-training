@@ -1,0 +1,17 @@
+.user-table-wrapper {
+  overflow-y: scroll;
+  height: 500px;
+  .user-table {
+    width: 800px;
+    table-layout: auto;
+    border-collapse: initial;
+    td {
+      border: 1px solid;
+    }
+  }
+}
+
+.user-paginator {
+  display: flex;
+  margin-top: 30px;
+}
