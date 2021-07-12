@@ -4,12 +4,17 @@
 @import './components/modules/Navbar';
 @import './components/modules/Circle';
 @import './components/modules/Form';
+@import './components/modules/UserList';
 
 html,
 body,
 #root,
 .app {
   height: 100%;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .app {
@@ -20,6 +25,7 @@ body,
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 40px;
     .nav-menu {
       display: flex;
       align-items: center;
