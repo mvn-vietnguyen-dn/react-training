@@ -1,57 +1,42 @@
-import { Component } from "react";
+import { FC, lazy, Suspense } from "react";
+import { Switch, Route } from "react-router-dom";
 
 import "./App.scss";
 import { Header, Footer } from "./components/layouts";
-import { Circle } from "./components/modules";
+import { PrivateRoute } from "./components/libs";
 
-interface AppState {
-  page: "home" | "about";
-}
+const Home = lazy(() => import('./components/pages/Home'));
+const Products = lazy(() => import('./components/pages/Products'));
+const Account = lazy(() => import('./components/pages/Account'));
+const ProductDetail = lazy(() => import('./components/pages/ProductDetail'));
+const Login = lazy(() => import('./components/pages/Login'));
 
-class App extends Component<{}, AppState> {
-  state: AppState = {
-    page: "home",
-  };
-
-  render() {
-    const { page } = this.state;
-
-    return (
-      <div className="app">
-        <Header />
-        <main className="main">
-          <ul className="nav-menu">
-            <li
-              className={`nav-menu-item ${
-                page === "home" ? "active" : ""
-              }`.trim()}
-              onClick={() => this.setState({ page: "home" })}
-            >
-              Home
-            </li>
-            <li
-              className={`nav-menu-item ${
-                page === "about" ? "active" : ""
-              }`.trim()}
-              onClick={() => this.setState({ page: "about" })}
-            >
-              About
-            </li>
-          </ul>
-          {page === "home" && (
-            <div className="circle-section">
-              <div className="circle-wrapper">
-                <Circle circleSize="110" number={20} isCountdowning />
-                <Circle circleSize="150" number={25} isCountdowning />
-                <Circle circleSize="130" number={15} isCountdowning />
-              </div>
-            </div>
-          )}
-        </main>
-        <Footer />
-      </div>
-    );
-  }
-}
+const App: FC = () => (
+  <div className="app">
+    <Header />
+    <main className="main">
+      <Switch>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        <Route path="/products" exact>
+          <Products />
+        </Route>
+        <Route path="/products/:id" exact>
+          <ProductDetail />
+        </Route>
+        <PrivateRoute path="/account" exact>
+          <Account />
+        </PrivateRoute>
+        <Route path="/login" exact>
+          <Login />
+        </Route>
+      </Suspense>
+      </Switch>
+    </main>
+    <Footer />
+  </div>
+);
 
 export default App;

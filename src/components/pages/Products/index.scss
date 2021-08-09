@@ -1,0 +1,37 @@
+.products {
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 20px;
+    .product-item {
+      position: relative;
+      .product-image {
+        max-width: 100%;
+        height: auto;
+      }
+      .product-name {
+        margin-top: 10px;
+      }
+      .product-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        &.active {
+          color: red;
+        }
+      }
+      .btn-action {
+        display: block;
+        width: 100%;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 10px;
+      }
+    }
+  }
+}
