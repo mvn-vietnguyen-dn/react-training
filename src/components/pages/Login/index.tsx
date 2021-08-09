@@ -7,7 +7,7 @@ interface IAccount {
   password: string;
 }
 
-export const Login: FC = () => {
+const Login: FC = () => {
   const [form, setForm] = useState<IAccount>({} as IAccount);
   const auth = useAuth();
 
@@ -50,3 +50,5 @@ export const Login: FC = () => {
     </form>
   );
 };
+
+export default Login;

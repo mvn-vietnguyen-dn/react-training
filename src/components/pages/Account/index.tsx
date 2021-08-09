@@ -1,3 +1,5 @@
 import { FC } from "react";
 
-export const Account: FC = () => <div>Hi, I'm Account</div>
+const Account: FC = () => <div>Hi, I'm Account</div>
+
+export default Account;
